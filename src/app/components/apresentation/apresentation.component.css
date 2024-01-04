@@ -1,0 +1,109 @@
+.content-apresentation {
+  z-index: 2;
+  position: relative;
+  overflow: hidden;
+  padding: 2rem 0;
+}
+
+.title {
+  color: #fff;
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+.header {
+  position: relative;
+  z-index: 3;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 1rem;
+}
+
+.social-media {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(30px, 30px));
+  grid-gap: 0.5rem;
+  width: min-content;
+}
+
+.icon {
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+}
+
+.icon-container {
+  position: relative;
+  display: inline-block;
+}
+
+.icon {
+  transition: transform 0.2s ease-in-out;
+}
+
+.icon-container:hover .icon {
+  transform: translateY(-2px);
+}
+
+.icon-container::before {
+  content: "\2022";
+  position: absolute;
+  bottom: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 15px;
+  line-height: 15px;
+  opacity: 0;
+  color: #fff;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.icon-container:hover::before {
+  opacity: 1;
+}
+
+.welcome {
+  margin: 2rem 0;
+  font-size: 3rem;
+  font-weight: bold;
+  color: #fff;
+}
+.welcome span {
+  border-bottom: #3e3be9 2px solid;
+}
+
+.content-banner {
+  height: auto;
+  width: 400px;
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: #3524738c;
+  opacity: 60%;
+}
+
+.bio {
+  max-width: 50%;
+  color: #fff;
+  margin-bottom: 2rem;
+}
+
+.contact-button {
+  color: #fff;
+  border-bottom: #3e3be9 2px solid;
+}
+
+.content-button-contact {
+  display: flex;
+  cursor: pointer;
+  transition: width 0.4s ease-in-out;
+  width: 100px;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.content-button-contact:hover {
+  width: 130px;
+}
