@@ -1,6 +1,19 @@
-<div class="content-apresentation">
+<div class="content-apresentation" *transloco="let t; read: 'apresentation'">
   <div class="header">
-    <p class="title">Iury Dev</p>
+    <div class="content-left">
+      <p class="title">Iury Dev</p>
+      <div class="config-language">
+        <button
+          *ngFor="let language of listLanguages"
+          (click)="changeLanguage(language.code)"
+          appSetLanguageActive
+          [languageButton]="language.code"
+          [currentLanguage]="this.translocoService.getActiveLang()"
+        >
+          {{ language.title }}
+        </button>
+      </div>
+    </div>
     <div class="social-media">
       <div class="icon-container">
         <img
@@ -27,20 +40,24 @@
   </div>
 
   <div class="welcome">
-    <h2>Nice to meet you!</h2>
-    <h2><span>I'm Iury Castro</span></h2>
+    <h2>
+      {{ t("title.firstLine") }}
+    </h2>
+    <h2>
+      <span>{{ t("title.secondLine") }}</span>
+    </h2>
   </div>
 
   <div class="bio">
     <p>
-      Graduated as a software analyst and developer, I have 4 years of
-      experience in developing web applications in different segments, both in
-      the private industry and in the public sector.
+      {{ t("description") }}
     </p>
   </div>
 
   <div class="content-button-contact">
-    <button class="contact-button">CONTACT ME</button>
+    <button class="contact-button">
+      {{ t("buttonContact") }}
+    </button>
     <img class="icon right-arrow" alt="" src="assets/svg/right-arrow.svg" />
   </div>
 
