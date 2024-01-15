@@ -6,3 +6,11 @@
 .content-components {
   padding: 0 9rem;
 }
+
+.divider {
+  height: 2px;
+  width: 100%;
+  background-color: #ffffff;
+  opacity: 50%;
+  margin: 3rem 0;
+}
