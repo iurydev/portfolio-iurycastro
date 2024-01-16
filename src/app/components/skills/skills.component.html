@@ -1,0 +1,10 @@
+<div class="content-skills" *transloco="let t">
+  <div class="skill" *ngFor="let skill of skillsList">
+    <p class="title">
+      {{ skill.name }}
+    </p>
+    <p class="experience">
+      {{ skill.experience }} {{ t("translocoSkills.skill.experience") }}
+    </p>
+  </div>
+</div>

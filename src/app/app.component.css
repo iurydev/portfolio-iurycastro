@@ -1,6 +1,7 @@
 .container-app {
   background-color: #151515;
   height: 100vh;
+  overflow: auto;
 }
 
 .content-components {

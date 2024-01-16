@@ -1,0 +1,14 @@
+.content-skills {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(170px, auto));
+  grid-gap: 0.5rem;
+}
+.title,
+.experience {
+  color: #fff;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: bold;
+}
