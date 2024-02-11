@@ -1,38 +1,68 @@
-@media only screen and (max-width: 39.9rem) {
+@media only screen and (max-width: 60.625rem) {
   .header {
     grid-template-columns: 1fr;
     grid-gap: 1rem;
+    width: 100%;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
   }
   .header .grid-item {
     justify-content: center;
   }
+  .content-banner {
+    left: 50%;
+    transform: translateX(-50%);
+    padding-top: 2rem;
+    width: 400px;
+    position: relative;
+  }
+  .bio {
+    max-width: 100%;
+  }
+
+  .section-2 {
+    text-align: center;
+  }
+
+  .content-button-contact {
+    margin: 0 auto;
+  }
 }
-@media only screen and (min-width: 40rem) {
+@media only screen and (min-width: 60.688rem) {
   .header {
     grid-template-columns: 1fr 170px;
+    position: relative;
   }
   .social-media {
     direction: rtl;
     padding-right: 1rem;
   }
+  .content-banner {
+    top: -20px;
+    right: 0;
+    width: 400px;
+    position: absolute;
+  }
+  .bio {
+    max-width: 50%;
+  }
 }
 
 .content-apresentation {
-  z-index: 2;
   position: relative;
   overflow: hidden;
-  padding-top: 2rem;
 }
 
 .header {
-  position: relative;
+  padding-top: 2rem;
   z-index: 3;
   display: grid;
   align-items: center;
 }
 
 .header .title {
-  color: #fff;
   font-weight: bold;
   font-size: 1.5rem;
   margin-right: 1.5rem;
@@ -88,7 +118,6 @@
   margin: 2rem 0;
   font-size: 2.5rem;
   font-weight: bold;
-  color: #fff;
 }
 .welcome span {
   border-bottom: #3e3be9 2px solid;
@@ -96,18 +125,12 @@
 
 .content-banner {
   height: auto;
-  width: 400px;
   z-index: 1;
-  position: absolute;
-  top: 0;
-  right: 0;
   background-color: #f2f2f2;
   opacity: 60%;
 }
 
 .bio {
-  max-width: 50%;
-  color: #fff;
   margin-bottom: 2rem;
   font-size: 1rem;
 }
@@ -122,7 +145,6 @@
   cursor: pointer;
   overflow: hidden;
   white-space: nowrap;
-  margin-right: 0;
   font-size: 1rem;
   width: 150px;
 }

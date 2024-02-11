@@ -1,67 +1,71 @@
 <div class="content-apresentation" *transloco="let t; read: 'apresentation'">
-  <div class="header">
-    <div class="content-left grid-item">
-      <p class="title">Iury Dev</p>
-      <div class="config-language">
-        <button
-          *ngFor="let language of listLanguages"
-          (click)="changeLanguage(language.code)"
-          appSetLanguageActive
-          [languageButton]="language.code"
-          [currentLanguage]="this.translocoService.getActiveLang()"
-        >
-          {{ language.title }}
-        </button>
+  <div class="section-1">
+    <div class="content-banner">
+      <img src="assets/photos/foto-perfil-sem-fundo.png" alt="" />
+    </div>
+    <div class="header">
+      <div class="content-left grid-item">
+        <h4 class="title">Iury Dev</h4>
+        <div class="config-language">
+          <button
+            *ngFor="let language of listLanguages"
+            (click)="changeLanguage(language.code)"
+            appSetLanguageActive
+            [languageButton]="language.code"
+            [currentLanguage]="this.translocoService.getActiveLang()"
+          >
+            {{ language.title }}
+          </button>
+        </div>
+      </div>
+      <div class="social-media grid-item">
+        <div class="icon-container">
+          <img
+            class="icon linkedin-icon"
+            alt="linkedin"
+            src="assets/svg/linkedin.svg"
+          />
+        </div>
+        <div class="icon-container">
+          <img
+            class="icon github-icon"
+            alt="github"
+            src="assets/svg/github.svg"
+          />
+        </div>
+        <div class="icon-container">
+          <img
+            class="icon github-icon"
+            alt="github"
+            src="assets/svg/instagram.svg"
+          />
+        </div>
       </div>
     </div>
-    <div class="social-media grid-item">
-      <div class="icon-container">
-        <img
-          class="icon linkedin-icon"
-          alt="linkedin"
-          src="assets/svg/linkedin.svg"
-        />
-      </div>
-      <div class="icon-container">
-        <img
-          class="icon github-icon"
-          alt="github"
-          src="assets/svg/github.svg"
-        />
-      </div>
-      <div class="icon-container">
-        <img
-          class="icon github-icon"
-          alt="github"
-          src="assets/svg/instagram.svg"
-        />
-      </div>
+
+  </div>
+
+  <div class="section-2">
+    <div class="welcome">
+      <h2>
+        {{ t("title.firstLine") }}
+      </h2>
+      <h2>
+        <span>{{ t("title.secondLine") }}</span>
+      </h2>
     </div>
-  </div>
 
-  <div class="welcome">
-    <h2>
-      {{ t("title.firstLine") }}
-    </h2>
-    <h2>
-      <span>{{ t("title.secondLine") }}</span>
-    </h2>
-  </div>
+    <div class="bio">
+      <p>
+        {{ t("description") }}
+      </p>
+    </div>
 
-  <div class="bio">
-    <p>
-      {{ t("description") }}
-    </p>
-  </div>
-
-  <div class="content-button-contact">
-    <button class="contact-button">
-      {{ t("buttonContact") }}
-    </button>
-    <img class="icon right-arrow" alt="" src="assets/svg/right-arrow.svg" />
-  </div>
-
-  <div class="content-banner">
-    <img src="assets/photos/foto-perfil-sem-fundo.png" alt="" />
+    <div class="content-button-contact">
+      <button class="contact-button">
+        {{ t("buttonContact") }}
+      </button>
+      <img class="icon right-arrow" alt="" src="assets/svg/right-arrow.svg" />
+    </div>
   </div>
 </div>

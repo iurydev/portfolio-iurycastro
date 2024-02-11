@@ -1,11 +1,13 @@
+@media only screen and (max-width: 60.625rem) {
+  .content-skills {
+    justify-content: center;
+  }
+}
+
 .content-skills {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(170px, auto));
-  grid-gap: 1rem;
-}
-.title,
-.experience {
-  color: #fff;
+  grid-gap: 2rem;
 }
 
 .title {

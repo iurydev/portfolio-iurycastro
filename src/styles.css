@@ -11,12 +11,12 @@
   box-sizing: border-box;
 }
 
-@media only screen and (max-width: 640px) {
+@media only screen and (max-width: 60.625rem) {
   html {
     font-size: 16px;
   }
 }
-@media only screen and (min-width: 641px) {
+@media only screen and (min-width: 60.688rem) {
   html {
     font-size: 18px;
   }
@@ -26,4 +26,12 @@ body {
   margin: 0;
   overflow: hidden;
   font-family: "Space Grotesk", sans-serif;
+}
+
+body p {
+  color: #d9d9d9;
+}
+
+body h1, h2, h3, h4 {
+  color: #FFF;
 }
